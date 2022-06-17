@@ -9,56 +9,53 @@
 
 
 *{
-    font-family: "Raleway"; 
+    font-family: "Raleway";
+    margin: 0; 
 }
 
+
                 /* HEADER */
+header{
+    width: 90%;
+    margin: auto;
+    margin-top: 3%;
+}                
 header nav{
     display: flex;
     flex-direction: row;
-    width: 95%;
-    margin: auto;
     justify-content: space-between;
     align-items: center;
-    margin-top: 55px;
-    margin-right: 50px;
 }
-
 nav img{
     width: 115px;
-    margin-left: 20px;
 }
-
 nav ul{
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
 }
-
 nav li{
     font-weight: normal;
     font-size: 20px;
     list-style-type: none;
 }
-
 ul a{
     color: black;
     text-decoration: none;
-    padding-left: 30px;
-    padding-right: 30px;
-   
+    padding: 0 30px;
 }
 nav a:hover{
     color: #0065fc;
     border-top: 2px solid #0065fc;
-    padding-top: 65px;
+    padding-top: 70px;
 }
+/*MAIN-SECTION1*/
 main{
-    width: 95%;
+    width: 90%;
     margin: auto;
+    margin-top: 3%;
 }
-
 #recherches{
     display: flex;
     flex-direction: column;
@@ -68,96 +65,114 @@ main{
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    margin-bottom: 2%;
 }
 #titre-recherches h1{
     font-weight: bold;
     font-size: 28px;
-    margin-top: 5%;
-    margin-bottom: 0;
+    margin: 0;
 }
 #titre-recherches p{
     font-weight: 500;
     font-size: 20px;
+    margin-top: 1%;
 }
 
-/*Recherche : formulaire*/
+/* formulaire*/
+
 form {
+    width: 33%;
+    min-width: 500px;
+    height: 65px;
     position: relative;
-    width: 555px;
-    height: 66px;
     border: 2px solid #f2f2f2;
     border-radius: 25px;
 }
-
-.map-icone{
+.map{/*div*/
     position: absolute;
-    font-size: 22px;
+    top: -1px;
+    left: -1px;
+    height: auto;
+    width: auto;
     background-color: #f2f2f2;
     border-radius: 20px 0 0 20px;
-    padding: 22px;
-    top: 0;
-    left: 0;
 }
-
-form input{
+.map-icone{
+   font-size: 22px;
+   padding: 22px;
+   
+}
+.ville{/*div*/
     position: absolute;
-    text-align: left;
-    padding-left: 20px;
-    top: 0%;
+    top: 0;
     left: 60px;
-    height: 60px;
+    height: 98%;
+    width: 55%;
+   
+   
+}
+input{
     font-size: 22px;
     font-weight: bold;
+    height: 98%;
+    width: 100%;
+    padding-left: 20px;
     border: none;
-    width: 322px;
-    max-width: 58%;
+    
+}
+.bouton-envoi{/*div*/
+    position: absolute;
+    top: 0;
+    right: -1px;
+    height: 100%;
+    width: 33%;
 }
 .envoyer{
-    position: absolute;
-    top: 0;
-    right: 0;
-    font-size: 22px;
     font-weight: bold;
     background-color: #0065fc;
     color: #fff;
-    height: 66px;
-    width: 150px;
+    height: 100%;
+    width: 100%;
     border-radius: 0 20px 20px 0;
     border: none;
+    padding: 23px;
+    text-align: center;
+    font-size: 22px;
 }
-.icone-loupe{
+.loupe{
     display: none;
     position: absolute;
-    top: 0;
-    right: 0;
-    width: 64px;
-    height: 64px;
+    top: -1px;
+    right: -1px;
+    width: auto;
+    height: auto;
+}
+.icone-loupe{
     font-size: 22px;
+    padding: 20px;
     font-weight: bold;
     background-color: #0065fc;
     color: #fff;
-    border-radius: 20px;
     border: none;
+    border-radius: 20px;
 }
 /*filtres*/
-
 .filtres{
     display: flex;
-    flex-direction: row;
+    flex-flow: row wrap;
     align-items: center;
     margin-top: 30px;
 }
 .filtres p{
     font-size: 22px;
     font-weight: bold;
-    
+    margin-right: 40px;
 }
 .options{
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
     align-items: center;
-    margin-left: 30px;
 }
 .choix{
     display: flex;
@@ -166,18 +181,18 @@ form input{
     border-left: none;
     border-radius: 30px;
     margin-right: 40px;
+    margin-bottom: 10px;
     cursor: pointer;
-    height: 60px;
+    height: 56px;
 }
 .choix div{
-    width: 62px;
-    height: 62px;
+    width: 60px;
+    height: 60px;
     background-color: #deebff;
     display: flex;
     justify-content: center;
     align-items: center;
     border-radius: 50%;
-    overflow: visible;
     font-size: 22px;
     color: #0065fc;
     margin-left: -3px;
@@ -197,53 +212,51 @@ form input{
     color: #deebff;
     background-color: #0065fc;
 }
-
-
-/*Recherches : info*/
-
+/*info*/
 #info{
     display: flex;
-    align-items: center;
-    width: 100%;
+    flex-direction: row;
+    align-items: baseline;
     margin-top: 22px;
 }
-#info div{
+#info .i{
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
     color: #0065fc;
     border-radius: 50%;
-    border: 1px solid hsl(0, 5%, 85%);
-    font-size: 17px;
+    border: 1px solid #f2f2f2;
     width: 27px;
     height: 27px;
     cursor: pointer;
+    margin-right: 20px;
 }
+
 #info p{
     font-size: 20px;
     font-weight: 400;
-    margin-left: 10px;
 }
 
-/*Conteneur : hebergements*/
-
+/*Main : Section2*/
 #conteneur{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    margin-top: 30px;
+    margin-top: 3%;
+   
 }
 .hebergements{
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
-    width: 63%;
+    justify-content: space-between;
+    width: 64%;
     background-color: #f2f2f2;
     border-radius: 20px;
 }
 .hebergements h2{
     font-size: 26px;
     font-weight: bold;
+    margin-top: 4%;
     margin-left: 4%;
 }
 #chambre{
@@ -252,8 +265,7 @@ form input{
     justify-content: space-around;
     align-content: center;
     border-radius: 20px;
-    margin: auto;
-    width: 100%;
+    margin: 2%;
 }
 #chambre a{
     display: flex;
@@ -261,21 +273,20 @@ form input{
     border-radius: 25px;
     background-color: #fff;
     width: 30%;
-    min-width: 300px;
-    margin: 2% auto;        
+    margin-bottom: 3%;     
     height: 260px;        
     text-decoration: none;
     color: black;
     box-shadow: 0 0 8px 5px #f2f2f2;
 }
 #chambre a:hover{
-    color: #deebff;
-    background-color: cadetblue;
+    background-color: #deebff;
 }
+
 #chambre a img{
     border-radius: 20px 20px 0 0;
     object-fit: cover;
-    width: 96%; /*290px;*/
+    width: 96%; 
     margin: 2%;
     height: 145px;
 }
@@ -284,7 +295,7 @@ form input{
     display: flex;
     flex-direction: column;
     margin-top: 3%;
-    margin-left: 10%;
+    margin-left: 6%;
     width: 80%;
 }
 .nom-hotel h3{
@@ -307,15 +318,16 @@ form input{
     font-style: normal;
 }
 
-.nom-hotel div{
+.nom-hotel .etoiles{
     color: #0065fc;
     font-size: 16px;
     margin: 0;
+    margin-top: 10px;
 } 
 
 /*ETOILE*/
 .etoiles .fond{
-  color: #f2f2f2;
+  color: #deebff;
 }
 
 /*Lien du bas*/
@@ -327,12 +339,9 @@ form input{
     cursor: pointer;
 }
 .hebergements .plus{
-    margin-bottom: 4%;
-    margin-left: 3%;
+    margin-bottom: 5%;
+    margin-left: 4%;
 }
-
-
-
 
            /*populaires*/
 .populaires{
@@ -340,7 +349,7 @@ form input{
     flex-direction: column;
     background-color: #f2f2f2;
     border-radius: 20px;
-    width: 30%;
+    width: 33%;
 }
 
 #titre-populaires{
@@ -349,7 +358,7 @@ form input{
     justify-content: space-between;
     align-items: center;
     width: 80%;
-    margin: 0 auto;
+    margin: 40px auto;
 }                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             
 
 #titre-populaires h2{
@@ -367,27 +376,28 @@ form input{
     justify-content: space-between;
     align-items: center;
     width: 80%;
-    margin: 4% auto;
+    margin-left: auto;
+    margin-right: auto;
+    
 }
-
 
 #hebergements-populaires a{
     display: flex;
     flex-direction: row;
     align-items: center;
+    border-bottom: 30px;
     text-decoration: none;
     border-radius: 25px;
     background-color: #fff;
     color: black;
-    margin-bottom: 5%;
-    width: 100%;     /*400px;  90%*/
-    height: 170px;
+    width: 100%;    
+    height: 160px;
     box-shadow: 0 0 8px 5px #f2f2f2;
-   
+    margin-bottom: 40px;
 }
+
 #hebergements-populaires a:hover{
-    color: #deebff;
-    background-color: cadetblue;
+    background-color: #deebff;
 }
 
 #hebergements-populaires a img{
@@ -397,38 +407,38 @@ form input{
     object-fit: cover;
     margin: 1%;
 }
-#hebergements-populaires a figcaption{
+.commentaire{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    margin: 4%;
-    width: 50%;
-    max-width: 60%;
+    width: 60%;
     height: 80%;
 }
 .intitule{
     display: flex;
     flex-direction: column;
-    
 }
 .intitule h3{
     font-size: 20px;
     font-weight: bold;
     margin: 0;
     margin-bottom: 4%;
+    padding-left: 8%;
 }
 .intitule p {
     margin: 0;
     font-size: 16px;
     font-weight: 500;
-    width: 90%;
+    padding-left: 8%;
 }
 
-.etoiles{
+.commentaire .etoiles{
     display: flex;
     flex-direction: row;
     margin-bottom: 2%;
     color: #0065fc;
+    font-size: 14px;
+    margin-left: 8%;
 }
 
 .intitule p em{
@@ -436,64 +446,87 @@ form input{
     font-style: normal;
 }
 
-
-                    /*activités*/
-#activites{
+/*MAIN : Section3*/
+#activites-marseille{
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    margin-bottom: 6%;
-    
-}  
-#activites h2{
+    margin-top: 3%;
+    margin-bottom: 4%;
+}
+#activites-marseille h2{
     font-size: 26px;
     font-weight: bold;
-}  
-#lieux{
-    display: none;
-   /* flex-flow: row nowrap;*/
-   flex-direction: column;
-    justify-content: space-between;
-    align-items: stretch;/**/
+    margin-bottom: 30px;
 }
-.lieux-activites{
+.lieux-activite{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.choix-activite, .duo{        /*section*/
     width: 22%;
-    height: 400px;
-    margin: auto;
+    height: 600px;
+    overflow: hidden;
+}
+.duo{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    border-radius: 25px;
-    box-shadow: 0 0 5px 8px #f2f2f2;
 }
-.lieux-activites a{
+.lieux-activite div a{
     display: flex;
     flex-direction: column;
     text-decoration: none;
-    color: #000;
-    
+    color: black;
+    width: 98%;
+    overflow: hidden;
+    margin: auto;
+    background-color: transparent;
+    box-shadow: 0px 0px 20px 0px #f2f2f2;
+    border-radius: 33px;
+    border: 1px solid #f2f2f2;
 }
 
+.lieux-activite div a img{
+    margin: 0;
+    object-fit: cover;
+    border-radius: 30px 30px 0 0 ;
+}
 .legende{
-    width: 50%;
-    height: 40px;
-    padding-left: 20px;
-    
+    display: flex;
+    align-items: flex-start;
+    height: 60px;
+    width: 100%;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 0 0 30px 30px;
 }
+.legende p{
+    margin: auto;
+    margin-left: 20px;
+}
+.lien-activite1 img, .lien-activite4 img{
+    height: 528px;
+}
+.lien-activite2 img{
+    height: 290px;
+}
+.lien-activite3 img{
+    height: 135px;
+}
+.lien-activite5 img{
+    height: 180px;
+}
+.lien-activite6 img{
+    height: 245px;
+} 
 
 
-    
-    
-    
-
-
-
-/* Footer */
+/* FOOTER */
 footer{
     display: flex;
     flex-direction: row;
     background-color: #f2f2f2;
-    width: 100%;
     padding-left: 3%;
 }
 footer section{
@@ -506,40 +539,33 @@ footer section{
 section h3{
     font-size: 20px;
     font-weight: bold;
+    margin-bottom: 20px;
 }
 .pied-de-page{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    
 }
-
 .pied-de-page a{
     text-decoration: none;
     color: black;
     font-size: 20px;
-    
 }
-.pied-de-page a:hover{
-    color: #0065fc;
-    border-bottom: 2px solid #0065fc;
-}
+
 
 /*----------------------------*/
 /* Media Queries */
 
 @media screen and ( max-width: 992px){
-    body{
-        margin-left: 0;
-        margin-right: 0;
-        width: 100%;
+   
+    header{
+        margin: 0;
     }
+   
     header nav{
         display: flex;
         flex-direction: column;
         margin-top: 5%;
-        width: 100%;
-       
     }
     nav a{
         border-bottom: 4px solid #f2f2f2;
@@ -553,27 +579,23 @@ section h3{
         text-decoration: none;
         border-top: none;
     }
-    #recherches{
-        width: 80%;
-        margin: auto;
-    }
-   
-    #titre-recherches h1{
-        font-size: 28px;
-        margin-bottom: 0;
-        margin-top: 20px;
+    #titre-recherches{
+       margin: 20px 10px; 
     }
     #titre-recherches p{
-        margin-top: 1%;
-        margin-bottom: 50px;
-        font-size: 16px;
+      font-size: 16px;
+    }
+    /*formulaire*/
+    form{
+        width: 60%;
+        
     }
     
     /*filtres*/
     .filtres{
         display: flex;
         flex-direction: column;
-       align-items: flex-start;
+        align-items: flex-start;
     }
     .options{
         margin-left: 0;
@@ -582,9 +604,9 @@ section h3{
     .choix{
         margin-bottom: 2%;
     }
-    
+    /*info*/
     #info{
-        width: 90%;
+        width: 100%;
         margin-top: 2%;
     }
 
@@ -592,62 +614,123 @@ section h3{
     #conteneur{
         display: flex;
         flex-direction: column-reverse;
-        
+        margin: 4% 0;
     }
     .populaires{
         width: 100%;
+        margin-left: 0;
+    }
+   
+    #titre-populaires{
+        width: 60%;
+        margin-top: 3%;
+    }
+    .intitule{
+        width: 60%;
         margin: auto;
-       
+    }
+    .commentaire .etoiles{
+        width: 60%;
+        margin: auto;
+        padding-left: 18px;
     }
     .hebergements{
         width: 100%;
         margin: auto;
         margin-top: 40px;
     }
+    #chambre a{
+        width: 45%;
+    }
 
-
+    /*Activites*/
+    #activites-marseille{
+        width: 100%;
+    }
+    .lieux-activite{
+        flex-direction: column;
+        justify-content: space-between;
+        margin-bottom: 50px ;
+        margin-top: 50px;
+    }
+    .lieux-activite div{
+        width: 80%;
+        margin: auto;
+        height: auto;
+    }
+    
+    .lieux-activite div a{
+        height: 300px;
+        margin-bottom: 50px;
+    }
+    .lieux-activite div a img{
+        height: 245px;
+    }
    
-    
-   
-  
+    footer{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        
+    }
 
-    
-    
-
-
-
+    footer section{
+        width: 80%;
+        margin-bottom: 5%;
+        margin-top: 5%;
+    }
 }
 
 @media screen and (max-width : 768px){
+    
+    header nav{
+        margin-left: 0;
+        margin-right: 0;
+    }
+   
+    nav img{
+        width: 100px;
+    }
+    nav ul{
+        padding: 0;
+    }
+    nav li{
+        font-size: 16px;
+    }
+    nav a{
+        padding-left: 0;
+        padding-right: 30px;
+    }
    
     /*Titre-h1*/
     #titre-recherches h1{
-       font-size: 22px;
+       font-size: 20px;
     }
    
     /*Formulaire*/
     form{
-      width: 350px;
-      margin: auto;
-    }
-    .envoyer{
-        display: none;
-    }
-    input{
-        font-size: 18px;
-        width: 200px;/*a definir*/
+        width: 90%;
+        min-width: 200px;
         
     }
-   
-    .icone-loupe{
-        display: block;
-        right: 0;
-        top: 0;
+    /*.ville{
+        width: 60%;
+        max-width: 150px;
+    }*/
+    .bouton-envoi{
+        display: none;
     }
+    .loupe{
+        display: flex;
+    }
+    
     /*Filtres*/
     .filtres{
         display: flex;
         flex-direction: column;
+    }
+    .options{
+        width: 100%;
     }
     .choix{
         height: 40px;
@@ -663,8 +746,13 @@ section h3{
         padding-right: 10px;
     }
     /*Info*/
-    #info{
-        width: 100%;
+    #info p{
+        font-size: 18px;
+    }
+    #info div{
+        width: 20px;
+        height: 20px;
+        font-size: 12px;
     }
     /*Conteneur*/
     #conteneur{
@@ -673,6 +761,9 @@ section h3{
         justify-content: center;
     }
     /*Les plus populaires*/
+    #titre-populaires h2{
+        font-size: 26px;
+    }
     .populaires{
         width: 100%;
         border-radius: 0;
@@ -688,25 +779,21 @@ section h3{
         background-color: #fff;
     }
     .hebergements h2{
-        width: 100%;
-        margin-left: 2%;
+        margin-left: 10%;
+        font-size: 26px;
     }
     #chambre{
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-       
     }
-    .chambre a{
-        width: 100%;
-        
-    }   
-    .chambre a img{
-        /*height: 100px;*/
-        width: 100%;
+    #chambre a{
+        width: 85%;
+        height: 340px;
+        margin-top: 5%;
     }
-    .chambre a:hover{
-        background-color: #deebff;
+    #chambre a img{
+        height: 225px;
     }
     .nom-hotel h3{
         font-size: 18px;
@@ -714,23 +801,17 @@ section h3{
     .nom-hotel p{
         font-size: 14px;
     }
-
-
-
-
-
-
-
-    /*Footer*/
-    footer{
-        display: flex;
-        flex-direction: column;
+    #activite-marseille h2{
+        font-size: 26px;
     }
+    .legende{
+        font-size: 22px;
+    }
+
+            /*Footer*/
+    
     footer section{
         width: 100%;
+        margin-bottom: 20px;
     }
-   
-
-    
-   
 }
