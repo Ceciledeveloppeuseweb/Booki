@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap" rel="stylesheet" />
-
+    <link rel="stylesheet" href="css/reset.css" />
     <link rel="stylesheet" href="css/normalize.css" />
     <link rel="stylesheet" href="css/style.css" />
     <script defer src="https://use.fontawesome.com/releases/v5.15.4/js/all.js"
@@ -38,7 +38,7 @@
                     <i class="map-icone fas fa-map-marker-alt"></i>
                 </div>
                 <div class="ville">
-                    <input type="text" name="ville" id="ville" placeholder="Marseille, France" maxlength="30" />
+                    <input type="text" name="ville" id="ville" value="Marseille, France" maxlength="30" />
                 </div>
                 <div class="bouton-envoi">
                     <button type="button" class="envoyer">Rechercher</button>
@@ -171,7 +171,9 @@
                         </div>
                     </a>
                 </figure>
-                <div class="plus"><a href="#">Afficher plus</a></div>
+                <div class="plus">
+                    <a href="#">Afficher plus</a>
+                </div>
             </div>
             <!--Les plus populaires-->
             <div class="populaires">
@@ -185,7 +187,7 @@
                                 alt="chambre Hôtel le soleil du matin" />
                         <div class="commentaire">
                             <div class="intitule">
-                                <h3>Hôtel Le soleil du<br/> matin</h3>
+                                <h3>Hôtel Le soleil du matin</h3>
                                 <p>Nuit à partir de 128<em>€</em></p>
                             </div>
                             <div class="etoiles">
@@ -202,7 +204,7 @@
                             alt="chambre d'hôte au cœur de l'eau" />
                         <div class="commentaire">
                             <div class="intitule">
-                                <h3>Au cœur de l'eau<br/> Chambres d'hôtes</h3>
+                                <h3>Au cœur de l'eau Chambres d'hôtes</h3>
                                 <p>Nuit à partir de 71<em>€</em></p>
                             </div>
                             <div class="etoiles">
@@ -219,7 +221,7 @@
                             alt="chambre hôtel Tout bleu et blanc" />
                         <div class="commentaire">
                             <div class="intitule">
-                                <h3>Hôtel Tout bleu et<br/> Blanc</h3>
+                                <h3>Hôtel Tout bleu et Blanc</h3>
                                 <p>Nuit à partir de 68<em>€</em></p>  
                             </div>
                             <div class="etoiles">
@@ -235,7 +237,7 @@
             </div>
         </section>
         <!--Activités-->
-        <section id="activites-marseille">
+        <section id="activites">
             <h2>Activités à Marseille</h2>
             <figure class="lieux-activite">
                 <div class="choix-activite">
@@ -294,24 +296,24 @@
     <!--FOOTER-->
     <footer>
         <section>
-            <h3>À propos</h3>
+            <h3>A propos</h3>
             <div class="pied-de-page">
-                <a href="#">Fonctionnement du site</a><br/>
-                <a href="#">Conditions générales de vente</a><br/>
+                <a href="#">Fonctionnement du site</a>
+                <a href="#">Conditions générales de vente</a>
                 <a href="#">Données et confidentialité</a>
             </div>
         </section>
         <section>
             <h3>Nos hébergements</h3>
             <div class="pied-de-page">
-                <a href="#">Charte qualité</a><br/>
+                <a href="#">Charte qualité</a>
                 <a href="#">Soumettre votre hôtel</a>
             </div>
         </section>
         <section>
             <h3>Assistance</h3>
             <div class="pied-de-page">
-                <a href="#">Centre d'aide</a><br/>
+                <a href="#">Centre d'aide</a>
                 <a href="#">Nous contacter</a>
             </div>
         </section>
