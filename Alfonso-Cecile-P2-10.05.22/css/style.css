@@ -1,0 +1,938 @@
+/* *, *:before, *:after{
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}*/
+
+
+*{
+    font-family: "Raleway";
+    margin: 0; 
+}
+
+
+                /* HEADER */
+header{
+    width: 90%;
+    margin: auto;
+    margin-top: 3%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}                
+
+header img{
+    width: 100px;
+}
+header nav ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+header nav li{
+    font-weight: normal;
+    font-size: 16px;
+    list-style-type: none;
+}
+header nav ul a{
+    color: black;
+    text-decoration: none;
+    padding: 0 30px;
+}
+header nav ul a:hover{
+    color: #0065fc;
+    border-top: 3px solid #0065fc;
+    padding-top: 57px;
+}
+/*MAIN-SECTION1*/
+main{
+    width: 90%;
+    margin: auto;
+    margin-top: 3%;
+}
+#recherches{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+#titre-recherches{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 2%;
+}
+#titre-recherches h1{
+    font-weight: bold;
+    font-size: 20px;
+    margin: 0;
+}
+#titre-recherches p{
+    font-weight: 500;
+    font-size: 16px;
+    margin-top: 1%;
+}
+
+/* formulaire*/
+
+form {
+    width: 30%;
+    min-width: 400px;
+    height: 48px;
+    position: relative;
+    border: 1px solid #f2f2f2;
+    border-radius: 18px;
+}
+.map{     /*div*/
+    position: absolute;
+    top: -1px;
+    left: -1px;
+    
+    background-color: #f2f2f2;
+    border-radius: 18px 0 0 18px;
+}
+.map-icone{
+   font-size: 18px;
+   padding: 15px 20px;
+   
+}
+input{    /*div*/
+    position: absolute;
+    top: 0;
+    left: 50px;
+    height: 98%;
+    width: 55%;
+    max-width: 300px;
+    font-size: 16px;
+    font-weight: bold;
+    padding-left: 20px;
+    border: none;
+}
+
+.envoyer{
+    font-weight: bold;
+    background-color: #0065fc;
+    color: #fff;
+    height: 100%;
+    border-radius: 0 18px 18px 0;
+    border: none;
+    text-align: center;
+    font-size: 16px;
+    position: absolute;
+    top: 0;
+    right: -1px;
+    width: 25%;
+}
+
+.icone-loupe{
+    font-size: 18px;
+    padding: 15px;
+    font-weight: bold;
+    background-color: #0065fc;
+    color: #fff;
+    border: none;
+    border-radius: 18px;
+    display: none;
+    position: absolute;
+    top: -1px;
+    right: -1px;
+    
+}
+
+/*filtres*/
+.filtres{
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    margin-top: 30px;
+}
+.filtres p{
+    font-size: 16px;
+    font-weight: bold;
+    margin-right: 40px;
+}
+.options{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+.choix{
+    display: flex;
+    align-items: center;
+    border: 3px solid #f2f2f2;
+    border-left: none;
+    border-radius: 30px;
+    margin-right: 40px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    overflow: visible;
+    height: 48px;
+}
+.choix div{  /*div des îcones*/
+    width: 50px;
+    height: 50px;
+    background-color: #deebff;
+    color: #0065fc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    margin-left: -1px;
+}
+.choix .icone{
+    font-size: 18px;
+}
+.choix p{ /*texte du filtre*/
+    
+    padding-right: 17px;
+    padding-left: 15px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 30px;
+    margin: 0;
+}
+.choix:hover{
+    color: #deebff;
+    background-color: #0065fc;
+}
+/*info*/
+#info{
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    margin-top: 22px;
+}
+#info .i{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #0065fc;
+    border-radius: 50%;
+    border: 1px solid #f2f2f2;
+    width: 27px;
+    height: 27px;
+    cursor: pointer;
+    margin-right: 20px;
+}
+
+#info p{
+    font-size: 16px;
+    font-weight: 400;
+}
+
+/*Main : Section2*/
+#conteneur{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 3%;
+}
+.hebergements{
+    display: flex;
+    flex-direction: column;
+    width: 64%;
+    background-color: #f2f2f2;
+    border-radius: 20px;
+}
+.hebergements h2{
+    font-size: 20px;
+    font-weight: bold;
+    margin: 3%;
+    
+}
+#chambre{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-content: center;
+    border-radius: 20px;
+    margin: 0 2%;
+}
+#chambre a{
+    display: flex;
+    flex-direction: column;
+    border-radius: 25px;
+    background-color: #fff;
+    width: 30%;
+    min-width: 220px;
+    margin: 4px;
+    margin-bottom: 20px;     
+    text-decoration: none;
+    color: black;
+    box-shadow: 0 0 18px 0 #d0cccc;
+}
+#chambre a:hover{
+    background-color: #deebff;
+}
+
+#chambre a img{
+    border-radius: 20px 20px 0 0;
+    object-fit: cover;
+    width: 96%;
+    min-width: 212px; 
+    margin: 5px;
+    height: 120px;
+}
+
+.nom-hotel{
+    display: flex;
+    flex-direction: column;
+    margin: 6px 20px;
+}
+.nom-hotel h3{
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 0;
+    margin-top: 0;
+}
+
+.nom-hotel p{
+    color: black;
+    font-size: 14px;
+    font-weight: 500;
+    margin: 0;
+    margin-top: 2%;
+}
+
+.nom-hotel p em{
+    font-weight: bold;
+    font-style: normal;
+}
+
+.nom-hotel .etoiles{
+    color: #0065fc;
+    font-size: 12px;
+    margin: 0;
+    margin-top: 10px;
+} 
+
+/*ETOILE*/
+.etoiles .fond{
+  color: #d0cccc;
+}
+
+/*Lien du bas*/
+.hebergements .plus a{
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.hebergements .plus{
+  margin: 20px 3%;
+}
+
+           /*populaires*/
+.populaires{
+    display: flex;
+    flex-direction: column;
+    background-color: #f2f2f2;
+    border-radius: 20px;
+    width: 33%;
+}
+
+#titre-populaires{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 78%;
+    margin: 6% auto;
+}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             
+
+#titre-populaires h2{
+    font-size: 20px;                                                                   
+    font-weight: bold;
+}
+
+#titre-populaires .icone{
+    font-size: 20px;
+}
+
+#hebergements-populaires {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 85%;
+    margin: 0 auto;
+}
+
+#hebergements-populaires a{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-decoration: none;
+    border-radius: 25px;
+    background-color: #fff;
+    color: black;
+    width: 98%;    
+    height: 33%;
+    max-height: 150px;
+    box-shadow: 0 0 18px 0 #d0cccc;
+    margin: 4px 4px 25px;
+}
+
+#hebergements-populaires a:hover{
+    background-color: #deebff;
+}
+
+#hebergements-populaires a img{
+    height: 95%;
+    min-height: 140px;
+    width: 40%;
+    border-radius: 20px 0 0 20px;
+    object-fit: cover;
+    margin: 5px;
+}
+.commentaire{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 55%;
+    height: 80%;
+}
+.intitule{
+    display: flex;
+    flex-direction: column;
+    width: 100%;/**/
+}
+.intitule h3{
+    font-size: 16px;
+    font-weight: bold;
+    margin: 0;
+    margin-bottom: 4%;
+    padding-left: 8%;
+}
+.intitule p {
+    margin: 0;
+    font-size: 14px;
+    font-weight: 500;
+    padding-left: 8%;
+}
+
+.commentaire .etoiles{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 2%;
+    color: #0065fc;
+    font-size: 10px;
+    margin-left: 8%;
+}
+
+.intitule p em{
+    font-weight: bold;
+    font-style: normal;
+}
+
+/*MAIN : Section3*/
+#activites{
+    display: flex;
+    flex-direction: column;
+    margin: 4% 0;
+}
+#activites h2{
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+.lieux-activite{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.choix-activite, .duo{        /*section*/
+    width: 22%;
+    height: 450px;
+    overflow: hidden;
+    border-radius: 30px;
+}
+.duo{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.lieux-activite div a{
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    color: black;
+    width: 96%;
+    height: auto;
+    overflow: hidden;
+    margin: 4px auto;
+    background-color: transparent;
+    box-shadow: 0px 0px 20px 0px #f2f2f2;
+    border-radius: 30px;
+    border: 1px solid #f2f2f2;
+}
+
+.lieux-activite div a img{
+    margin: 0;
+    object-fit: cover;
+    border-radius: 30px 30px 0 0 ;
+}
+.legende{
+    display: flex;
+    align-items: flex-start;
+    height: 50px;
+    width: 100%;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 0 0 30px 30px;
+}
+.legende p{
+    margin: auto;
+    margin-left: 20px;
+}
+.lien-activite1 img, .lien-activite4 img{
+    height: 390px;
+}
+.lien-activite2 img{
+    height: 186px;
+}
+.lien-activite3 img{
+    height: 110px;
+}
+.lien-activite5 img{
+    height: 140px;
+}
+.lien-activite6 img{
+    height: 152px;
+} 
+
+
+/* FOOTER */
+footer{
+    display: flex;
+    flex-direction: row;
+    background-color: #f2f2f2;
+    padding-left: 3%;
+}
+footer section{
+    width: 33.3%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 3%;
+    margin-bottom: 3%;
+}
+section h3{
+    font-size: 17px;
+    font-weight: bold;
+    margin-bottom: 3%;
+}
+.pied-de-page{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
+}
+.pied-de-page a{
+    text-decoration: none;
+    color: black;
+    font-size: 16px;
+    margin-bottom: 2%;
+}
+
+
+/*------------Media Queries ----------------*/
+
+@media screen and ( max-width: 992px){
+   
+    header{
+        width: 99%; display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin-top: 40px;
+        margin-bottom: 30px;
+    }
+    header nav{
+        width: 100%;
+        padding-bottom: 20px;
+        border-bottom: 3px solid #f2f2f2;
+        margin-top: 5%;
+    }
+    header nav ul{
+        padding: 0;
+        width: 100%;
+        justify-content: center;
+    }
+    
+    header nav ul a{
+        border-bottom: 3.5px solid #f2f2f2;
+        padding-bottom: 20px;
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+    header nav ul a:hover{
+        border-bottom: 3.5px solid #0065fc;
+        color: #0065fc;
+        text-decoration: none;
+        border-top: none;
+    }
+    /*formulaire*/
+    form{
+        width: 60%;
+    }
+    input{
+        width: 300px;
+        max-width: 57%;
+    }
+    
+    
+    /*filtres*/
+    .filtres{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .options{
+        margin-left: 0;
+        width: 100%;
+    }
+    .choix{
+        margin-bottom: 2%;
+    }
+    /*info*/
+    #info{
+        width: 100%;
+        margin-top: 2%;
+    }
+
+    /*Hebergements*/
+    #conteneur{
+        display: flex;
+        flex-direction: column-reverse;
+        margin: 4% 0;
+    }
+
+    .populaires{
+        width: 100%;
+    }
+    #titre-populaires{
+        width: 67%;
+    }
+    #hebergements-populaires{
+        width: 70%;
+    }
+   
+    #hebergements-populaires a img{
+       height: 140px;
+        width: 60%;
+    }
+
+    .intitule{
+        margin: auto;
+    }
+    .commentaire .etoiles{
+        margin-top: 20px;
+    }
+
+    /*hébergements à marseille*/
+    .hebergements{
+        width: 100%;
+        margin-top: 40px;
+    }
+    #chambre a{
+        width: 45%;
+    }
+    .nom-hotel{
+        margin: auto;
+        margin-bottom: 5px;
+        
+    }
+    
+
+    /*Activites*/
+    #activites{
+        width: 90%;
+        margin: 8% auto ;
+    }
+    #activites h2{
+        margin-bottom: 0;
+        margin-left: 2%;
+    }
+    .lieux-activite{
+        flex-direction: column;
+        justify-content: space-between;
+        margin-top: 20px;
+    }
+    .choix-activite, .duo{
+        width: 100%;
+        margin: 0;
+        height: auto;
+    }
+    
+    .lieux-activite div a{
+        height: 300px;
+        margin-bottom: 50px;
+    }
+    .lieux-activite div a img{
+        height: 245px;
+    }
+
+    footer section{
+        padding: 0px;
+    }
+    .pied-de-page{
+        margin-bottom: 3%;
+    }
+   
+   
+}
+
+@media screen and (max-width : 768px){
+    /*Header*/
+   
+    header nav ul a{
+        padding-left: 55px;
+        padding-right: 55px;
+    }
+    nav li{
+        font-size: 18px;
+    }
+   
+    /*Main*/
+    main{
+        width: 100%;
+    }
+    #recherches{
+        width: 90%;
+        margin: auto;
+    }
+   
+    /*Titre-h1*/
+    #titre-recherches{
+        margin-bottom: 8%;
+    }
+    #titre-recherches h1{
+        font-size: 24px;
+        margin-bottom: 2%;
+    }
+    #titre-recherches p{
+        font-size: 18px;
+    }
+    
+    /*Formulaire*/
+    form{
+        width: 100%;
+        min-width: 260px;
+        margin: auto;
+        margin-right: 10px;
+    }
+    
+    input{
+        font-size: 20px;
+        max-width: 240px;
+        width: 75%;
+    }
+    .envoyer{
+        display: none;
+    }
+    .icone-loupe{
+        display: block;
+    }
+    
+    /*Filtres*/
+    .filtres{
+        display: flex;
+        flex-direction: column;
+    }
+    .filtres p{
+        margin-bottom: 2%;
+    }
+    .options{
+        display: flex;
+        justify-content: left;
+    }
+   
+    .choix{
+        height: 40px;
+        margin-right: 2%;
+        margin-left: 20px;
+    }
+    .choix div{
+        width: 42px;
+        height: 42px;
+    }
+    .choix p{
+        font-size: 16px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    /*Info*/
+    #info p{
+        font-size: 16px;
+    }
+    #info div{
+        width: 20px;
+        height: 20px;
+    }
+    #info .i{
+        font-size: 14px;
+        padding: 2px 4px;
+        margin-right: 10px;
+    }
+
+     /*Conteneur*/
+    #conteneur{
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        width: 100%;
+    }
+     /*Les plus populaires*/
+     .populaires{
+        width: 100%;
+        border-radius: 0;
+    }
+    #titre-populaires{
+        width: 85%;
+        margin-top: 24px;
+    }
+
+    #titre-populaires h2{
+        font-size: 22px;
+    }
+   
+    #hebergements-populaires{
+        width: 90%;
+        margin-bottom: 6%;
+    }
+    #hebergements-populaires a{
+        margin-bottom: 20px;
+        height: 180px;
+        max-height: none;
+    }
+    #hebergements-populaires a img{
+        width: 40%;
+        height: 170px;
+    
+    }
+    .intitule{
+        width: 80%;
+        margin-top: 0;
+    }
+        
+    .intitule h3{
+        padding-left: 0;
+    }
+    .intitule p{
+        padding-left: 0;
+    }
+    .commentaire{
+        width: 60%;
+    }
+    
+    .commentaire .etoiles{
+        padding-left: 10px;
+        font-size: 12px;
+    }
+    
+     /*Hebergements*/
+    .hebergements{
+        width: 100%;
+        border-radius: 0;
+        background-color: #fff;
+        margin-top: 5%;
+    }
+    .hebergements h2{
+        margin-left: 8%;
+        font-size: 22px;
+    }
+    #chambre{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    #chambre a{
+        width: 90%;
+        height: 215px;
+    }
+    #chambre a img{
+        height: 125px;
+    }
+    .nom-hotel{
+        margin-top: 0;
+        margin-left: 8%;
+        width: 90%;
+        margin-bottom: 0;
+    }
+    .nom-hotel h3{
+        font-size: 18px;
+    }
+    .nom-hotel p{
+        font-size: 16px;
+    }
+    .hebergements .plus{
+        margin-left: 8%;
+        width: 90%;
+        margin-top: 2%;
+    }
+    
+     /*Activités*/
+    #activites{
+        width: 99%;
+    }
+    #activites h2{
+        font-size: 22px;
+        margin-left: 6%;
+    }
+    .choix-activite, .duo{
+        width: 90%;
+        margin: auto;
+    }
+    .legende{
+        font-size: 18px;
+    }
+    .lieux-activite div a{
+        height: 210px;
+        margin-bottom: 20px;
+    }
+    .lieux-activite div a img{
+        height: 155px;
+    }
+
+
+     /*Footer*/
+    footer{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        padding: 8%;
+    }
+    
+    footer section{
+        width: 90%;
+        text-align: left;
+        margin-bottom: 6%;
+    }
+    footer section h3, footer section .pied-de-page{
+        margin-bottom: 4%;
+    }
+}
+@media screen and (max-width : 399px){
+    header nav ul a{
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    #recherches{
+        width: 100%;
+    }
+    #titre-recherches{
+        margin: 2%;
+    }
+    form{
+        width: 99%;
+    }
+    .ville{
+        width: 50%;
+    }
+    .filtres p{
+        margin-left: 2%;
+    }
+
+}
